@@ -1,0 +1,63 @@
+@use "sass:math";
+
+$circle-size: 18px;
+
+:host {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    height: $circle-size + 48px;
+    margin: 8px auto 16px auto;
+}
+
+.step-bar {
+    position: absolute;
+    top:  math.div($circle-size, 2);
+    left: 0px;
+    height: 2px;
+    max-width: 100%;
+    width: inherit;
+    background: var(--gray-2);
+
+    .step-bar-progress {
+        background: var(--primary);
+    }
+
+}
+
+.step {
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    background: var(--gray-2);
+    z-index: 2;
+    position: relative;
+    
+    span {
+        width: 120px;
+        position: absolute;
+        bottom:-32px;
+        left: -51px;;
+        text-align: center;
+        color: var(--gray-2);
+    }
+
+    &.step-done {
+        background: var(--primary);
+        span {
+            color: var(--primary);
+        }
+    }
+
+    &.step-active {
+        background: white;
+        border: 2px solid var(--primary);
+
+        span {
+            color: var(--primary);
+        }
+    }
+
+}

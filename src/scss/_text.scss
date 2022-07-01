@@ -1,0 +1,70 @@
+.page-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.panel-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.session-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header-1, .header-2, .header-3 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.header-2 {
+    font-size: 32px;
+}
+
+.header-3 {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+
+.fw-400 { font-weight:  400; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+
+$font-size: (
+    0: 12px,
+    1: 14px,
+    2: 16px,
+    3: 18px,
+    4: 22px,
+    5: 24px,
+    6: 28px,
+    7: 32px,
+    8: 36px
+);
+
+@each $index, $value in $font-size {
+    .f-#{$value} {
+        font-size: #{$value};
+    }
+}
+
+@each $color, $value in $colors {
+    .text-#{$color} {
+        color: #{$value};
+    }
+}

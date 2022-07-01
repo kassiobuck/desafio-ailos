@@ -1,0 +1,18 @@
+@import "variables", "reset.scss", "text.scss", "buttons", "card";
+
+.page-botton-buttons {
+    min-height: calc(100vh - (78px + 89px));
+    padding:32px;
+}
+
+.botton-buttons-bar {
+    height: 78px;
+    background: white;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+
+    button {
+        margin-left: 16px;
+    }
+}

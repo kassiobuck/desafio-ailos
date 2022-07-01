@@ -1,0 +1,41 @@
+
+$primary: #165C7D;
+$secondary: #FFA300;
+$blue: #009ED0;
+$green: #00C246;
+$teal: #007D8A;
+$red: #C13018;
+$orange: #FFA300;
+$yellow: #FFA300;
+$dark: #040F14;
+$gray-4: #889499;
+$gray-3: #A7B0B5;
+$gray-2: #C6CED1;
+$gray-1: #E7EEF1;
+
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "blue": $blue,
+    "green": $green,
+    "teal": $teal,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "info": $blue,
+    "success": $green,
+    "danger": $red,
+    "warning": $orange,
+    "alert": $yellow,
+    "dark": $dark,
+    "gray-4": $gray-4,
+    "gray-3": $gray-3,
+    "gray-2": $gray-2,
+    "gray-1": $gray-1,
+  );
+
+  :root {
+    @each $color, $value in $colors {
+      --#{$color}: #{$value};
+    }
+  }

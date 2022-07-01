@@ -1,0 +1,4 @@
+<div class="step-bar"></div>
+<div class="step" *ngFor="let step of steps; index as i; trackBy: stepTrackBy" [ngClass]="{'step-done': i < currentIndex, 'step-active': i == currentIndex}">
+    <span>{{step}}</span>
+</div>

@@ -1,0 +1,34 @@
+<div class="page-botton-buttons">
+
+    <app-step-by-step [steps]="steps" [index]="stepIndex"></app-step-by-step>
+
+    <h1 class="fw-400 f-24px">Informe o CPF do futuro cooperado (a)</h1>
+    <p class="text-gray-4">
+        Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.
+        <br>
+        Digite apenas os números (sem pontos ou traços).
+    </p>
+
+    <label class="fw-700" for="cpf">CPF</label>
+    <div class="search-cpf">
+        <form [formGroup]="form" (ngSubmit)="searchUser()">
+            <input formControlName="cpf" type="text" [mask]="cpfMask" placeholder="000.000.000-00" id="cpf">
+            <button id="btn-search" [disabled]="disableSearchBtn || searchLoading" class="btn-primary" type="submit">
+                {{searchLoading ? 'Pesquisando...' : 'Consultar por CPF'}}
+            </button>
+            <div [hidden]="!form.touched" class="errors">
+                <span *ngIf="form.controls.cpf.errors?.required || form.controls.cpf.errors?.cpf" class="text-danger">Informe um CPF válido.</span>
+            </div>
+        </form>
+    </div>
+
+    <div *ngIf="novoCooperado" class="search-result">
+        <app-info-cooperado [cooperado]="novoCooperado"></app-info-cooperado>
+    </div>
+
+</div>
+
+<div class="botton-buttons-bar">
+    <button *ngIf="novoCooperado" class="btn-primary btn-lg">Iniciar nova admissão</button>
+    <button class="btn-secondary btn-lg">Dicas para admissao</button>
+</div>

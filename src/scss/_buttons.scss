@@ -1,0 +1,39 @@
+.btn-primary, .btn-secondary {
+    border: 1px solid var(--primary);
+    padding: 6px 24px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 200ms linear ease-in;
+
+    &[disabled] {
+        opacity: 0.5;
+    }
+
+    &:hover {
+        filter: drop-shadow(2px 2px 1px var(--gray-3));
+    }
+    
+}
+
+
+.btn-secondary {
+    color: var(--primary);
+    background: #fff;
+
+}
+
+.btn-text-primary {
+    cursor: pointer;
+    color: var(--primary);
+    background: none;
+    border: none;
+    font-weight: 600;
+}
+
+
+.btn-lg {
+    padding: 16px 36px;
+    font-size: 16px;
+}

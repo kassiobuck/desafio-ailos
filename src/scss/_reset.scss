@@ -1,0 +1,32 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
+    color: var(--dark);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+h1 {
+    margin: 12px 0px;
+}
+
+h2 {
+    margin: 0px 0px;
+}
+
+input[type="text"] {
+    background: #fff;
+    border: 1px solid var(--dark);
+    padding: 6px 8px;
+}
+
+input[type="text"]::placeholder {
+    color: var(--gray-3);
+}

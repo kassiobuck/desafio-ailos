@@ -1,0 +1,21 @@
+.page-grid {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 89px auto;
+    grid-template-columns: 100px auto;
+
+    #app-side-nav {
+        grid-row: 1 / span 2;
+    }
+
+    #app-top-nav {
+        grid-column: 2;
+    }
+
+    #current-page {
+        grid-column: 2;
+        grid-row: 2;
+        background-color: var(--gray-1);
+    }
+}
